@@ -15,7 +15,7 @@ public:
         while (top <= bottom && left <= right) {
 
             // Left to right
-            for (int i = top; i <= right; i++) {
+            for (int i = left; i <= right; i++) {
                 ans.push_back(matrix[top][i]);
             }
             top++;
