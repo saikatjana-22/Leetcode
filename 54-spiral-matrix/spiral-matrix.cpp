@@ -32,9 +32,10 @@ public:
                 ans.push_back(matrix[bottom][i]);
 
             }
+            }
             
             bottom--;
-            }
+            
             if (left<=right)
             {
             for (int i =bottom;i>=top;i--)
@@ -42,9 +43,10 @@ public:
                 ans.push_back(matrix[i][left]);
 
             }
+            }
             
             left++;
-            }
+            
         }
         return ans;
         
