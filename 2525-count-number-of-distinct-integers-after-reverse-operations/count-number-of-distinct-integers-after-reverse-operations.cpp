@@ -19,8 +19,9 @@ int reverse (int n)
         for (int i =0;i<n;i++)
     {
         int rev = reverse (nums[i]);
-        s.insert(nums[i]);
+     
         s.insert(rev);
+           s.insert(nums[i]);
     
     }
     return s.size();
