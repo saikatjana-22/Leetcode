@@ -2,26 +2,24 @@ class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
         int n = arr.size();
-        unordered_map<int,int>m;
+
+        unordered_map <int,int>m;
         for (int i =0;i<n;i++)
         {
             m[arr[i]]++;
         }
-
-        // now set er modhhe entry korbo
-        unordered_set <int>s;
-        for (auto x:m)
+        unordered_set<int>s;
+        for (auto x :m)
         {
-            int freq=x.second;
-
+            int freq= x.second;
             if (s.find(freq)!=s.end())
             {
                 return false;
             }
-            else 
-            s.insert (freq);
+            else
+            s.insert(freq);
         }
-        
         return true;
+        
     }
 };
